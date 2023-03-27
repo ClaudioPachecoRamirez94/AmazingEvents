@@ -1,0 +1,303 @@
+/* NAV */
+
+.imgnav {
+  width: 10vw;
+}
+
+.btnnav {
+  margin: 1rem;
+}
+
+.navanch {
+  color: white;
+  background-color: rgb(48, 52, 75);
+  font-size: 1.3rem;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 2rem;
+  border: solid 1px white;
+  border-radius: 0.5rem;
+  width: 10vw;
+
+}
+
+/* CARROUSEL */
+
+.carousel .carousel-item {
+  height: 30vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 30vh;
+}
+
+.h1carrousel {
+  color: rgb(224, 4, 108);
+  font-size: 7rem;
+  -webkit-text-stroke: 5px rgb(48, 52, 52);
+  padding-bottom: 3.5rem;
+}
+
+/* CHECKFORM */
+
+.checkForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.form-check-input {
+  margin-right: 1rem;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: row;
+  width: 9vw;
+  color: rgb(48, 52, 52);
+  font-weight: bold;
+}
+
+.searcheck {
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN */
+
+main {
+  background-color: rgba(224, 4, 107, 0.3);
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.cards2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  color: white;
+  background-color: rgb(48, 52, 52);
+}
+
+.cardfooter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.card-img-top {
+  height: 40%;
+  object-fit: cover;
+}
+
+/* CONTACT FORM */
+
+.contactDiv {
+  display: flex;
+  justify-content: center;
+  height: 48vh;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 30%;
+  margin: 5%;
+}
+
+.exampleInput {
+  padding-bottom: 1rem;
+}
+
+.submitContact{
+  color: white;
+  background-color: rgb(48, 52, 75);
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 47vw;
+  border: solid 1px white;
+  border-radius: 0.5rem;
+  width: 25vw;
+}
+
+/* DETAILS */
+
+.detailsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85.4vh;
+}
+
+.imgDetails{
+  padding-top: 7vh;
+}
+
+/* TABLE */
+
+.statsDiv {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
+
+.table {
+  margin: 2.5vh;
+  height: 65vh;
+  width: 50vw;
+  color: white;
+  background-color: rgb(48, 52, 52);
+}
+
+tr,
+td {
+  border: solid 1px white;
+  height: 2rem;
+}
+
+th{
+  background-color: black;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(48, 52, 52);
+}
+
+i {
+  font-size: 2rem;
+  margin: 1rem;
+  color: white;
+}
+
+.cohort {
+  margin: 0;
+  padding-right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: center;
+  color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .navanch{
+    width: 50vw;
+    font-size: 1rem;
+  }
+
+  .imgnav{
+    width
+    : 50vw;
+  }
+
+  .checkForm {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  .card{
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv{
+    height: 100vh;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 1023px) {
+  .navanch{
+    width: 50vw;
+    font-size: 1rem;
+  }
+
+  .imgnav{
+    width
+    : 50vw;
+  }
+
+  .checkForm {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  .card{
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv{
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1024px){
+/*   .navanch{
+    width: 50vw;
+    font-size: 1rem;
+  }
+
+  .imgnav{
+    width
+    : 50vw;
+  }
+
+  .checkForm {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  .card{
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv{
+    height: 100vh;
+  } */
+}
+
