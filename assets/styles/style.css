@@ -18,7 +18,18 @@
   border: solid 1px white;
   border-radius: 0.5rem;
   width: 10vw;
+}
 
+.navanch-active {
+  color: rgb(48, 52, 75);
+  background-color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 2rem;
+  border: solid 5px rgb(224, 4, 108);
+  border-radius: 0.5rem;
+  width: 10vw;
 }
 
 /* CARROUSEL */
@@ -29,6 +40,7 @@
 
 .carousel-item img {
   object-fit: cover;
+  object-position: 0% -1000%;
   top: 0;
   left: 0;
   min-height: 30vh;
@@ -46,7 +58,7 @@
 .checkForm {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 1rem;
 }
 
@@ -62,9 +74,18 @@
   font-weight: bold;
 }
 
+.form-check>label{
+  display: flex;
+  flex-direction: row;
+}
+
 .searcheck {
   margin: 0;
   padding: 0;
+}
+
+.glass {
+  width: 1vw;
 }
 
 /* MAIN */
@@ -79,21 +100,25 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 1rem;
   flex-wrap: wrap;
+  padding-bottom: 3rem;
+  /* padding: 0.5rem; */
+  /*   margin: 1rem; */
 }
 
-.cards2 {
+/* .cards2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 1rem;
   flex-wrap: wrap;
-}
+} */
 
 .card {
   color: white;
   background-color: rgb(48, 52, 52);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .cardfooter {
@@ -109,25 +134,70 @@ main {
 
 /* CONTACT FORM */
 
+.contact-image {
+  background-image: url(../images/carrousel-contact-1.png);
+  height: 16vh;
+  object-position: 0% -50%;
+}
+
+.h1-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(224, 4, 108);
+  font-size: 7rem;
+  -webkit-text-stroke: 5px rgb(48, 52, 52);
+}
+
+.contact-space {
+  display: flex;
+  justify-content: center;
+  min-height: 69vh;
+}
+
 .contactDiv {
   display: flex;
   justify-content: center;
-  height: 48vh;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  height: 50vh;
+  width: 50vw;
+  background-color: rgb(48, 52, 52);
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 30%;
+  height: 50%;
   margin: 5%;
 }
 
-.exampleInput {
-  padding-bottom: 1rem;
+.input-name {
+  padding-bottom: 0.5rem;
+  color: white;
 }
 
-.submitContact{
+.message-area {
+  padding-bottom: 2rem;
+  color: white;
+}
+
+.input-form {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.message-area {
+  padding: 0.2rem;
+  color: black;
+  max-height: 7rem;
+  min-height: 7rem;
+  margin-bottom: 1rem;
+  resize: none;
+}
+
+.submitContact {
   color: white;
   background-color: rgb(48, 52, 75);
   font-size: 1rem;
@@ -149,22 +219,47 @@ main {
   min-height: 85.4vh;
 }
 
-.imgDetails{
-  padding-top: 7vh;
+.imgDetails {
+  display: flex;
+  align-items: center;
 }
 
 /* TABLE */
 
-.statsDiv {
+.stats-image {
+  background-image: url(../images/carrousel-stats-1.jpg);
+  height: 16vh;
+  object-fit: cover;
+  object-position: 0% 100%;
+}
+
+.h1-stats {
   display: flex;
   justify-content: center;
-  height: 70vh;
+  align-items: center;
+  color: rgb(224, 4, 108);
+  font-size: 7rem;
+  -webkit-text-stroke: 5px rgb(48, 52, 52);
+}
+
+.stats-div {
+  height: 66vh;
+}
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  height: 50vh;
 }
 
 .table {
-  margin: 2.5vh;
-  height: 65vh;
-  width: 50vw;
+  /* height: 80vh;
+  width: 80vw; */
+  table-layout: fixed;
+  margin-bottom: 0;
   color: white;
   background-color: rgb(48, 52, 52);
 }
@@ -172,11 +267,15 @@ main {
 tr,
 td {
   border: solid 1px white;
-  height: 2rem;
+  /*   height: 2rem;
+  width: 33%; */
 }
 
-th{
+th {
   background-color: black;
+}
+
+td {
 }
 
 /* FOOTER */
@@ -206,98 +305,175 @@ i {
 /* MEDIA QUERIES */
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .navanch{
-    width: 50vw;
+  .navanch,
+  .navanch-active {
+    width: 70vw;
     font-size: 1rem;
   }
 
-  .imgnav{
-    width
-    : 50vw;
-  }
-
-  .checkForm {
-    flex-direction: column;
-    font-size: 0.9rem;
-  }
-  .card{
-    margin-bottom: 1rem;
-  }
-
-  .cohort {
-    font-size: 15px;
-  }
-
-  .carousel .carousel-item {
-    height: 10vh;
-  }
-
-  .statsDiv{
-    height: 100vh;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 1023px) {
-  .navanch{
+  .imgnav {
     width: 50vw;
-    font-size: 1rem;
   }
 
-  .imgnav{
-    width
-    : 50vw;
+  .stats-image{
+    width: 100%;
   }
 
-  .checkForm {
-    flex-direction: column;
-    font-size: 0.9rem;
-  }
-  .card{
-    margin-bottom: 1rem;
+  .h1-stats{
+    font-size: 4.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2rem;
   }
 
-  .cohort {
-    font-size: 15px;
-  }
-
-  .carousel .carousel-item {
-    height: 10vh;
-  }
-
-  .statsDiv{
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1024px){
-/*   .navanch{
-    width: 50vw;
-    font-size: 1rem;
-  }
-
-  .imgnav{
-    width
-    : 50vw;
-  }
-
-  .checkForm {
-    flex-direction: column;
-    font-size: 0.9rem;
-  }
-  .card{
-    margin-bottom: 1rem;
-  }
-
-  .cohort {
-    font-size: 15px;
-  }
-
-  .carousel .carousel-item {
-    height: 10vh;
-  }
-
-  .statsDiv{
-    height: 100vh;
+/*   .inputsquare{
+    width: 5rem !important;
   } */
+
+  .form-check{
+    width: 5rem;
+  }
+
+  .stats-image{
+    width: 100%;
+  }
+
+  .h1-contact{
+    font-size: 3.5rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+  }
+
+  .contact-space{
+    height: 70vh;
+  }
+
+  .contactDiv{
+    width: 90vw;
+    height:40vh;
+  }
+
+  .contactForm{
+    width: 90vw;
+  }
+
+  .tables{
+    width:80%;
+    table-layout: fixed;
+  }
+
+  .flexCheckDefault {
+    font-size: 1rem;
+  }
+
+
+  .checkForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv {
+    height: 100vh;
+  }
+
+  .tables {
+    margin-top: 15vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navanch,
+  .navanch-active {
+    width: 50vw;
+    font-size: 1rem;
+    margin: 0.3rem;
+  }
+
+  .imgnav {
+    width: 20vw;
+  }
+
+  .flexCheckDefault {
+    font-size: 1rem;
+  }
+
+  .checkForm {
+    flex-direction: column;
+    font-size: 1em;
+    padding-left: 5rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .navanch,
+  .navanch-active {
+    width: 10vw;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
+  .imgnav {
+    width: 15vw;
+  }
+
+  .flexCheckDefault {
+    font-size: 1rem;
+  }
+
+  .checkForm {
+    flex-direction: column;
+    font-size: 1em;
+    padding-left: 5rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .cohort {
+    font-size: 15px;
+  }
+
+  .carousel .carousel-item {
+    height: 10vh;
+  }
+
+  .statsDiv {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1980px) {
+
 }
 
