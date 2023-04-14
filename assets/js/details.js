@@ -1,8 +1,17 @@
 const $eventsdetail = document.getElementById('eventsdetail');
 const urlParams = location.search;
 const params = new URLSearchParams(urlParams);
-const eventName = params.get("name");
-const evento = data.eventos.filter((evento) => evento.name == eventName);
+const eventId = params.get("id");
+let cardEvent = [];
+
+fetch('https://mindhub-xj03.onrender.com/api/amazing') // Reemplazar con la URL de la API real
+    .then(response => response.json()) // Analizar la respuesta como JSON
+    .then(data => {
+        cardEvent = data.events.find((evento) => evento._id == eventId);
+        printEventDetails(cardEvent);
+})
+.catch(error => {console.error(error);
+});
 
 function printEventDetails(evento) {
   let card = "";
@@ -13,14 +22,14 @@ function printEventDetails(evento) {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h3>Name: "${evento.name}"</h3>
-        <h3>Date: "${evento.date}"</h3>
-        <h3>Description: "${evento.description}"</h3>
-        <h3>Category: "${evento.category}"</h3>
-        <h3>Place: "${evento.place}"</h3>
-        <h3>Capacity: "${evento.capacity}"</h3>
-        <h3>Estimate: "${evento.estimate}"</h3>
-        <h3>Price: "${evento.price}"</h3>
+        <h3>Name: ${evento.name}</h3>
+        <h3>Date: ${evento.date}</h3>
+        <h3>Description: ${evento.description}</h3>
+        <h3>Category: ${evento.category}</h3>
+        <h3>Place: ${evento.place}</h3>
+        <h3>Capacity: ${evento.capacity}</h3>
+        <h3>Estimate: ${evento.estimate}</h3>
+        <h3>Price: ${evento.price}</h3>
       </div>
     </div>
   </div>`;
@@ -31,14 +40,14 @@ function printEventDetails(evento) {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h3>Name: "${evento.name}"</h3>
-        <h3>Date: "${evento.date}"</h3>
-        <h3>Description: "${evento.description}"</h3>
-        <h3>Category: "${evento.category}"</h3>
-        <h3>Place: "${evento.place}"</h3>
-        <h3>Capacity: "${evento.capacity}"</h3>
-        <h3>Assistance: "${evento.assistance}"</h3>
-        <h3>Price: "${evento.price}"</h3>
+        <h3>Name: ${evento.name}</h3>
+        <h3>Date: ${evento.date}</h3>
+        <h3>Description: ${evento.description}</h3>
+        <h3>Category: ${evento.category}</h3>
+        <h3>Place: ${evento.place}</h3>
+        <h3>Capacity: ${evento.capacity}</h3>
+        <h3>Assistance: ${evento.assistance}</h3>
+        <h3>Price: ${evento.price}</h3>
       </div>
     </div>
   </div>`;
@@ -46,4 +55,4 @@ function printEventDetails(evento) {
   $eventsdetail.innerHTML = card;
 }
 
-printEventDetails(evento[0]);
+
